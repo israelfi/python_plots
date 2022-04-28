@@ -9,7 +9,7 @@ amplitude = 2
 y = amplitude * np.sin(t)
 angles = np.zeros(t.shape[0])
 
-for k in range(t.shape[0] - 1):
+for k in range(1, t.shape[0]):
     angles[k] = atan2(y[k] - y[k - 1], t[k] - t[k - 1])
 
 rect_width = 0.4
@@ -34,7 +34,7 @@ def my_function(i):
     ax.set_ylim([1.1 * min(y), 1.1 * max(y)])
     ax.set_aspect('equal', adjustable='box')
 
-    ax2.set_title('Rectangle Angle')
+    ax2.set_title('Rectangle Angle (rad)')
     ax2.plot(t[:i], angles[:i], c='orange', linewidth=2)
     ax2.set_xlim([t[0], t[-1]])
     ax2.set_ylim([1.1 * min(angles), 1.1 * max(angles)])
@@ -57,11 +57,13 @@ ax.set_xlim([t[0], t[-1]])
 ax.set_ylim([1.1 * min(y), 1.1 * max(y)])
 ax.set_aspect('equal', adjustable='box')
 
-ax2.set_title('Rectangle Angle')
+ax2.set_title('Rectangle Angle (rad)')
 ax2.set_xlim([t[0], t[-1]])
 ax2.set_ylim([1.1 * min(angles), 1.1 * max(angles)])
 ax2.set_aspect('equal', adjustable='box')
 
+plt.tight_layout()
+
 ani = FuncAnimation(fig, my_function, interval=50, frames=t.shape[0])
-# ani.save('matplot003.gif', writer='imagemagick')
+ani.save('matplot003.gif', writer='imagemagick')
 plt.show()
