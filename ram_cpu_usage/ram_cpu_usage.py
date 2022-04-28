@@ -47,6 +47,6 @@ ax1.set_facecolor('#DEDEDE')
 ax.set_title('CPU %')
 ax1.set_title('RAM %')
 # animate
-ani = FuncAnimation(fig, my_function, interval=500)
+ani = FuncAnimation(fig, my_function, interval=200)
 # ani.save('matplot003_ram_cpu.gif', writer='imagemagick')
 plt.show()
