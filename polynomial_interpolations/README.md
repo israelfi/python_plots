@@ -7,4 +7,4 @@ Receives a set of `(x,y)` data and creates four interpolations:
 
 
 ## Result
-<div style="text-align:center"><img src="./polynomial_interpolations.png" width="1050" height="525" /></div>
+<div style="text-align:center"><img src="./polynomial_interpolations.png" width="900" height="525" /></div>
