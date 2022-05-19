@@ -65,5 +65,5 @@ ax2.set_aspect('equal', adjustable='box')
 plt.tight_layout()
 
 ani = FuncAnimation(fig, my_function, interval=50, frames=t.shape[0])
-ani.save('matplot003.gif', writer='imagemagick')
+# ani.save('matplot003.gif', writer='imagemagick')
 plt.show()
