@@ -16,12 +16,16 @@ def configure_axis(axis, grid=True):
 
     axis.xaxis.label.set_color('white')
     axis.yaxis.label.set_color('white')
-    ax.title.set_color('white')
+    axis.title.set_color('white')
+
+    # Uncomment the following lines to fix the spines at the origin
+    # axis.spines.left.set_position('zero')
+    # axis.spines.bottom.set_position('zero')
 
     if grid:
-        ax.grid(visible=True, which='major', color='white', linestyle='-', alpha=0.2)
-        ax.minorticks_on()
-        ax.grid(visible=True, which='minor', color='white', linestyle='-', alpha=0.1)
+        axis.grid(visible=True, which='major', color='white', linestyle='-', alpha=0.2)
+        axis.minorticks_on()
+        axis.grid(visible=True, which='minor', color='white', linestyle='-', alpha=0.1)
 
 
 x = np.linspace(0, 5)
@@ -30,7 +34,7 @@ y = np.tanh(x)
 fig = plt.figure(facecolor='#36454f', figsize=(9, 6))
 ax = fig.add_subplot()
 
-ax.plot(x, y, linewidth=2.5)
+ax.plot(x, y, linewidth=1, c='w')
 
 ax.set_title('Plot Title')
 ax.set_xlabel('X Label')
