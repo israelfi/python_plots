@@ -21,7 +21,11 @@ I mainly created this project to save the scripts for whenever I need them later
 <div style="text-align:center"><img src="./parametric_curve_animation/parametric_curve_animation.gif" width="525" height="525" /></div>
 
 ### Polynomial Interpolations
+#### Polynomial Interpolations
 <div style="text-align:center"><img src="./polynomial_interpolations/polynomial_interpolations.png" width="900" height="525" /></div>
+
+#### Interpolate Data
+<div style="text-align:center"><img src="./polynomial_interpolations/interpolate_data.png" width="900" height="500" /></div>
 
 ### RAM CPU Usage
 <div style="text-align:center"><img src="./ram_cpu_usage/matplot003_ram_cpu.gif" width="1050" height="525" /></div>
